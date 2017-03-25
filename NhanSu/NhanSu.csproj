@@ -60,6 +60,7 @@
     <Compile Include="Core\Model\DataContext.cs" />
     <Compile Include="Core\Model\Luong.cs" />
     <Compile Include="Core\Model\NhanVien.cs" />
+    <Compile Include="Core\Model\ObservableListSource.cs" />
     <Compile Include="Core\Model\Phong.cs" />
     <Compile Include="frm_dangnhap.cs">
       <SubType>Form</SubType>
