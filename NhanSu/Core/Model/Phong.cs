@@ -7,7 +7,7 @@ namespace NhanSu.Core.Model
     using System.Data.Entity.Spatial;
 
     [Table("QL_Phong")]
-    public partial class QL_Phong
+    public partial class Phong
     {
         [StringLength(30)]
         public string Map { get; set; }

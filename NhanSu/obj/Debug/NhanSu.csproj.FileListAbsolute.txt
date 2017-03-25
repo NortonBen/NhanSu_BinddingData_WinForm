@@ -10,3 +10,8 @@ C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Deb
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\Nhân Sự.exe
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\Nhân Sự.pdb
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_dangnhap.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\EntityFramework.dll
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\EntityFramework.xml
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.csprojResolveAssemblyReference.cache

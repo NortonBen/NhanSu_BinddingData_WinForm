@@ -6,7 +6,8 @@ namespace NhanSu.Core.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class QL_Luong
+    [Table("QL_Luong")]
+    public partial class Luong
     {
         [StringLength(30)]
         public string MaNV { get; set; }
