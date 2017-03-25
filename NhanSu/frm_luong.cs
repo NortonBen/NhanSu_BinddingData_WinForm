@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Đăng_nhập
+namespace NhanSu
 {
     public partial class frm_luong : Form
     {

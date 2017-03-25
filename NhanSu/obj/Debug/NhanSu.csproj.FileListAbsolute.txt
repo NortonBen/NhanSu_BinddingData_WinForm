@@ -1,0 +1,12 @@
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\Nhân Sự.exe.config
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\Nhân Sự.exe
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\Nhân Sự.pdb
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_chucvu.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_luong.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_nhanvien.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_phong.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.Properties.Resources.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.csproj.GenerateResource.Cache
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\Nhân Sự.exe
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\Nhân Sự.pdb
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_dangnhap.resources

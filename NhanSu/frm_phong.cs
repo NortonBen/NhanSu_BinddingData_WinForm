@@ -8,16 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Đăng_nhập
+namespace NhanSu
 {
-    public partial class Form1 : Form
+    public partial class frm_phong : Form
     {
-        public Form1()
+        public frm_phong()
         {
             InitializeComponent();
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

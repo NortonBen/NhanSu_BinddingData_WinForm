@@ -1,6 +1,6 @@
-﻿namespace Đăng_nhập
+﻿namespace NhanSu
 {
-    partial class Form1
+    partial class frm_dangnhap
     {
         /// <summary>
         /// Required designer variable.

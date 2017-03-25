@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Đăng_nhập
+namespace NhanSu
 {
-    public partial class frm_chucvu : Form
+    public partial class frm_dangnhap : Form
     {
-        public frm_chucvu()
+        public frm_dangnhap()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

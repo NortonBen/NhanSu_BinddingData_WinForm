@@ -1,4 +1,4 @@
-﻿namespace Đăng_nhập
+﻿namespace NhanSu
 {
     partial class frm_nhanvien
     {
