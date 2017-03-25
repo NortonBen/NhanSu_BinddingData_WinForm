@@ -52,19 +52,46 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_chucvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_chucvu.Designer.cs">
+      <DependentUpon>frm_chucvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_luong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_luong.Designer.cs">
+      <DependentUpon>frm_luong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_nhanvien.Designer.cs">
       <DependentUpon>frm_nhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_phong.Designer.cs">
+      <DependentUpon>frm_phong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_chucvu.resx">
+      <DependentUpon>frm_chucvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_luong.resx">
+      <DependentUpon>frm_luong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_nhanvien.resx">
       <DependentUpon>frm_nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_phong.resx">
+      <DependentUpon>frm_phong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
