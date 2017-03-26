@@ -16,7 +16,10 @@ namespace NhanSu.DataAccessLayer
         }
         [Key]
         [MaxLength(30)]
+        [Required]
         public string MaChucVu { get; set; }
+        [Required]
+        [MaxLength(30)]
         public string TenChucVu { get; set; }
 
         public virtual ObservableListSource<NhanVien> NhanViens { get; set; }

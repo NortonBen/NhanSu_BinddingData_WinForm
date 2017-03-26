@@ -9,18 +9,18 @@ namespace NhanSu.DataAccessLayer
     public  class Luong
     {
 
-        [Key]
-        public int MaLuong { get; set; }
+       
 
         [MaxLength(30)]
+        [Required]
+        [Key, ForeignKey("NhanVien")]
         public string MaNV { get; set; }
-        [ForeignKey("MaNV")]
         public virtual NhanVien NhanVien { get; set; }
 
-        public double Thuong { get; set; }
+        [Required]
+        public double heso { get; set; }
 
-        public double Phat { get; set; }
-
+        [Required]
         public double LuongCB { get; set; }
     }
 }

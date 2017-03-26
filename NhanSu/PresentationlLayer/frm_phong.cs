@@ -22,10 +22,10 @@ namespace NhanSu.PersentationlLayer
         public frm_phong()
         {
             InitializeComponent();
-            bind.setBindInput("Map", tbMaP);
-            bind.setBindInput("TenP", tbTenP);
-            bind.setBindInput("DiaChiP", tbDiaChi);
-            bind.setBindInput("SDT", tbSDT);
+            bind.setBindInput("Map", tbMaP,lb_Map);
+            bind.setBindInput("TenP", tbTenP,lb_TenP);
+            bind.setBindInput("DiaChiP", tbDiaChi,lb_DiaChi);
+            bind.setBindInput("SDT", tbSDT,lb_SDT);
             bind.setObject(phong);
         }
 
@@ -69,19 +69,22 @@ namespace NhanSu.PersentationlLayer
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(state == StateForm.New)
+            if (bind.isValidation())
             {
-                _data.add(phong);
-                phong = new Phong();
-                bind.setObject(phong);
-            }
-            if (state == StateForm.Edit)
-            {
-                _data.update(phong);
-                phong = new Phong();
-                bind.setObject(phong);
-            }
-            this.phongBindingSource.DataSource = _data.getList();
+                if (state == StateForm.New)
+                {
+                    _data.add(phong);
+                    phong = new Phong();
+                    bind.setObject(phong);
+                }
+                if (state == StateForm.Edit)
+                {
+                    _data.update(phong);
+                    phong = new Phong();
+                    bind.setObject(phong);
+                }
+                this.phongBindingSource.DataSource = _data.getList();
+            }  
         }
 
         private void btnxoa_Click(object sender, EventArgs e)

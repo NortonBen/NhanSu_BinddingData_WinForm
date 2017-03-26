@@ -14,18 +14,19 @@ namespace NhanSu.DataAccessLayer
         }
         [Key]
         [MaxLength(30)]
+        [Required]
         public string Map { get; set; }
 
-        
-        [StringLength(30)]
+        [Required]
+        [MaxLength(30)]
         public string TenP { get; set; }
 
-        
-        [StringLength(30)]
+        [Required]
+        [MaxLength(30)]
         public string DiaChiP { get; set; }
 
-       
-        [StringLength(30)]
+        [Required]
+        [MaxLength(30)]
         public string SDT { get; set; }
 
          

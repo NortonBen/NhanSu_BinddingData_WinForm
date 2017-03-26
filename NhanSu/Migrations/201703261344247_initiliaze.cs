@@ -12,7 +12,7 @@ namespace NhanSu.Migrations
                 c => new
                     {
                         MaChucVu = c.String(nullable: false, maxLength: 30),
-                        TenChucVu = c.String(),
+                        TenChucVu = c.String(nullable: false, maxLength: 30),
                     })
                 .PrimaryKey(t => t.MaChucVu);
             
@@ -21,18 +21,18 @@ namespace NhanSu.Migrations
                 c => new
                     {
                         MaNV = c.String(nullable: false, maxLength: 30),
-                        TenNV = c.String(maxLength: 40),
+                        TenNV = c.String(nullable: false, maxLength: 40),
                         NamSinh = c.DateTime(nullable: false),
-                        GioiTinh = c.String(),
+                        GioiTinh = c.String(nullable: false),
                         MaCV = c.String(maxLength: 30),
-                        MaP = c.String(maxLength: 30),
+                        MaP = c.String(nullable: false, maxLength: 30),
                         NgayVaoCty = c.DateTime(nullable: false),
-                        SDT = c.String(maxLength: 20),
-                        DiaChi = c.String(maxLength: 60),
+                        SDT = c.String(nullable: false, maxLength: 20),
+                        DiaChi = c.String(nullable: false, maxLength: 60),
                     })
                 .PrimaryKey(t => t.MaNV)
                 .ForeignKey("dbo.ChucVus", t => t.MaCV)
-                .ForeignKey("dbo.Phongs", t => t.MaP)
+                .ForeignKey("dbo.Phongs", t => t.MaP, cascadeDelete: true)
                 .Index(t => t.MaCV)
                 .Index(t => t.MaP);
             
@@ -41,9 +41,9 @@ namespace NhanSu.Migrations
                 c => new
                     {
                         Map = c.String(nullable: false, maxLength: 30),
-                        TenP = c.String(maxLength: 30),
-                        DiaChiP = c.String(maxLength: 30),
-                        SDT = c.String(maxLength: 30),
+                        TenP = c.String(nullable: false, maxLength: 30),
+                        DiaChiP = c.String(nullable: false, maxLength: 30),
+                        SDT = c.String(nullable: false, maxLength: 30),
                     })
                 .PrimaryKey(t => t.Map);
             
@@ -51,13 +51,11 @@ namespace NhanSu.Migrations
                 "dbo.Luongs",
                 c => new
                     {
-                        MaLuong = c.Int(nullable: false, identity: true),
-                        MaNV = c.String(maxLength: 30),
-                        Thuong = c.Double(nullable: false),
-                        Phat = c.Double(nullable: false),
+                        MaNV = c.String(nullable: false, maxLength: 30),
+                        heso = c.Double(nullable: false),
                         LuongCB = c.Double(nullable: false),
                     })
-                .PrimaryKey(t => t.MaLuong)
+                .PrimaryKey(t => t.MaNV)
                 .ForeignKey("dbo.NhanViens", t => t.MaNV)
                 .Index(t => t.MaNV);
             

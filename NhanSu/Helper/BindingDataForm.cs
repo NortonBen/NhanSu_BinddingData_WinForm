@@ -53,6 +53,18 @@ namespace NhanSu.Helper
                     control.Text = p.GetValue(obj).ToString();
                 }
             }
+            foreach (PropertyInfo p in objtype.GetProperties())
+            {
+                if (input.ContainsKey(p.Name))
+                {
+                    Control control = show_error[p.Name];
+                    if (p.GetValue(obj) == null)
+                    {
+                        control.Text = "";
+                        continue;
+                    }
+                }
+            }
             return this;
         }
 
@@ -60,60 +72,30 @@ namespace NhanSu.Helper
         {
             bool success = true;
             Type objtype = obj.GetType();
+
             foreach (PropertyInfo p in objtype.GetProperties())
             {
                 if (input.ContainsKey(p.Name))
                 {
+                    Control control = show_error[p.Name];
+                    control.Text = "";
+                }
+                if (input.ContainsKey(p.Name))
+                {
                     foreach (Attribute a in p.GetCustomAttributes(false))
                     {
-                        if (a.GetType().Name == "RequiredAttribute")
-                        {
-                            object o = p.GetConstantValue();
-                            if (o == null)
-                            {
-                                success = false;
-                                if (show_error.ContainsKey(p.Name))
-                                {
-                                    Label label = show_error[p.Name];
-                                    label.Text = "Bạn Chưa nhập " + p.Name;
-                                    errrs.Add("Bạn Chưa nhập " + p.Name);
-                                }
-                            }
 
+                        if (!RequiredAttribute(a, p))
+                        {
+                            success = false;
                         }
-
-                        if (a.GetType().Name == "MaxLengthAttribute")
+                        if (!MinLengthAttribute(a, p))
                         {
-                            MaxLengthAttribute max_a = (MaxLengthAttribute)a;
-                            string o = (string)p.GetConstantValue();
-                            if (o.Length > max_a.Length)
-                            {
-                                success = false;
-                                if (show_error.ContainsKey(p.Name))
-                                {
-                                    Label label = show_error[p.Name];
-                                    label.Text = "Trường " + p.Name + " dài hơn " + max_a.Length + " kí tự";
-                                    errrs.Add("Trường " + p.Name + " dài hơn " + max_a.Length + " kí tự");
-                                }
-                            }
-
+                            success = false;
                         }
-
-                        if (a.GetType().Name == "MinLengthAttribute")
+                        if (!MaxLengthAttribute(a, p))
                         {
-                            MinLengthAttribute max_a = (MinLengthAttribute)a;
-                            string o = (string)p.GetValue(obj);
-                            if (o.Length < max_a.Length)
-                            {
-                                success = false;
-                                if (show_error.ContainsKey(p.Name))
-                                {
-                                    Label label = show_error[p.Name];
-                                    label.Text = "Trường " + p.Name + " ngắn hơn " + max_a.Length + " kí tự";
-                                    errrs.Add("Trường " + p.Name + " ngắn hơn " + max_a.Length + " kí tự");
-                                }
-                            }
-
+                            success = false;
                         }
                     }
                 }
@@ -125,6 +107,96 @@ namespace NhanSu.Helper
         public List<String> getErrors()
         {
             return this.errrs;
+        }
+
+        private bool Required(Attribute a, PropertyInfo p)
+        {
+            object o = p.GetValue(obj);
+            if (o == null)
+            {
+                if (show_error.ContainsKey(p.Name))
+                {
+                    Label label = show_error[p.Name];
+                    label.Text = "Bạn Chưa nhập " + p.Name;
+                    errrs.Add("Bạn Chưa nhập " + p.Name);
+                }
+                return false;
+            }
+            return true;
+        }
+
+        private bool RequiredAttribute(Attribute a, PropertyInfo p)
+        {
+            if (a.GetType().Name == "RequiredAttribute")
+            {
+                object o = p.GetValue(obj);
+                if (o == null)
+                {
+                    if (show_error.ContainsKey(p.Name))
+                    {
+                        Label label = show_error[p.Name];
+                        label.Text = "Bạn Chưa nhập " + p.Name;
+                        errrs.Add("Bạn Chưa nhập " + p.Name);
+                    }
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        private bool MaxLengthAttribute(Attribute a, PropertyInfo p)
+        {
+           
+            if (a.GetType().Name == "MaxLengthAttribute")
+            {
+                MaxLengthAttribute max_a = (MaxLengthAttribute)a;
+                string o = (string)p.GetValue(obj);
+                if (!Required(a, p))
+                {
+                    return false;
+                }
+                if (o.Length > max_a.Length)
+                {
+                    
+                    if (show_error.ContainsKey(p.Name))
+                    {
+                        Label label = show_error[p.Name];
+                        label.Text = "Trường " + p.Name + " dài hơn " + max_a.Length + " kí tự";
+                        errrs.Add("Trường " + p.Name + " dài hơn " + max_a.Length + " kí tự");
+                    }
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        private bool MinLengthAttribute(Attribute a, PropertyInfo p)
+        {
+           
+            if (a.GetType().Name == "MinLengthAttribute")
+            {
+                if (!Required(a, p))
+                {
+                    return false;
+                }
+                MinLengthAttribute max_a = (MinLengthAttribute)a;
+                string o = (string)p.GetValue(obj);
+                if (o.Length < max_a.Length)
+                {
+                   
+                    if (show_error.ContainsKey(p.Name))
+                    {
+                        Label label = show_error[p.Name];
+                        label.Text = "Trường " + p.Name + " ngắn hơn " + max_a.Length + " kí tự";
+                        errrs.Add("Trường " + p.Name + " ngắn hơn " + max_a.Length + " kí tự");
+                    }
+                    return true;
+                }
+
+            }
+            return true;
         }
     }
 }
