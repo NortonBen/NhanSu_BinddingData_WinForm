@@ -1,4 +1,4 @@
-﻿namespace NhanSu
+﻿namespace NhanSu.PersentationlLayer
 {
     partial class frm_nhanvien
     {
@@ -290,6 +290,7 @@
             this.Controls.Add(this.label9);
             this.Name = "frm_nhanvien";
             this.Text = "frm_nhanvien";
+            this.Load += new System.EventHandler(this.frm_nhanvien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

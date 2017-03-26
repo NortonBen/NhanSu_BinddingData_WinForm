@@ -1,4 +1,4 @@
-namespace NhanSu.Core.Model
+namespace NhanSu.DataAccessLayer
 {
     using System;
     using System.Collections.Generic;
@@ -6,44 +6,38 @@ namespace NhanSu.Core.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("QL_NhanVien")]
-    public partial class NhanVien
+    public class NhanVien
     {
-        [StringLength(30)]
+        [Key]
+        [MaxLength(30)]
         public string MaNV { get; set; }
-
-        [StringLength(30)]
-        public string MaP { get; set; }
 
         [StringLength(40)]
         public string TenNV { get; set; }
 
-        [Key]
-        [Column(Order = 0, TypeName = "date")]
+        [DataType(DataType.Date)]
         public DateTime NamSinh { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [StringLength(30)]
         public string GioiTinh { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [StringLength(30)]
+        [MaxLength(30)]
         public string MaCV { get; set; }
+        [ForeignKey("MaCV")]
+        public virtual ChucVu ChucVu { get; set; }
 
-        [Key]
-        [Column(Order = 3, TypeName = "date")]
+        [MaxLength(30)]
+        public string MaP { get; set; }
+        [ForeignKey("MaP")]
+        public virtual Phong Phong { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime NgayVaoCty { get; set; }
 
-        [Key]
-        [Column(Order = 4)]
-        [StringLength(30)]
+        [StringLength(20)]
         public string SDT { get; set; }
 
-        [Key]
-        [Column(Order = 5)]
-        [StringLength(30)]
+
+        [StringLength(60)]
         public string DiaChi { get; set; }
     }
 }

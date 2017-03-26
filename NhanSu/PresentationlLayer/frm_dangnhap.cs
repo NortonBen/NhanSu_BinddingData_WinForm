@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NhanSu
+namespace NhanSu.PersentationlLayer
 {
     public partial class frm_dangnhap : Form
     {

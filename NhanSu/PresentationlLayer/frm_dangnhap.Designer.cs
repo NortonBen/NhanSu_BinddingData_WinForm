@@ -1,4 +1,4 @@
-﻿namespace NhanSu
+﻿namespace NhanSu.PersentationlLayer
 {
     partial class frm_dangnhap
     {

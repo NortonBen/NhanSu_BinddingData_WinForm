@@ -57,57 +57,83 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Model\DataContext.cs" />
-    <Compile Include="Core\Model\Luong.cs" />
-    <Compile Include="Core\Model\NhanVien.cs" />
-    <Compile Include="Core\Model\ObservableListSource.cs" />
-    <Compile Include="Core\Model\Phong.cs" />
-    <Compile Include="frm_dangnhap.cs">
+    <Compile Include="BusinessLogicLayer\BLY_ChucVu.cs" />
+    <Compile Include="BusinessLogicLayer\BLY_DangNhap.cs" />
+    <Compile Include="BusinessLogicLayer\BLY_Luong.cs" />
+    <Compile Include="BusinessLogicLayer\BLY_NhanVien.cs" />
+    <Compile Include="BusinessLogicLayer\BLY_Phong.cs" />
+    <Compile Include="BusinessLogicLayer\VadidationAttribute.cs" />
+    <Compile Include="DataAccessLayer\ChucVu.cs" />
+    <Compile Include="DataAccessLayer\DataContext.cs" />
+    <Compile Include="DataAccessLayer\Luong.cs" />
+    <Compile Include="DataAccessLayer\NhanVien.cs" />
+    <Compile Include="DataAccessLayer\ObservableListSource.cs" />
+    <Compile Include="DataAccessLayer\Phong.cs" />
+    <Compile Include="Helper\BindingDataForm.cs" />
+    <Compile Include="Helper\StateForm.cs" />
+    <Compile Include="PresentationlLayer\frm_dangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_dangnhap.Designer.cs">
+    <Compile Include="PresentationlLayer\frm_dangnhap.Designer.cs">
       <DependentUpon>frm_dangnhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_chucvu.cs">
+    <Compile Include="PresentationlLayer\frm_chucvu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_chucvu.Designer.cs">
+    <Compile Include="PresentationlLayer\frm_chucvu.Designer.cs">
       <DependentUpon>frm_chucvu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_luong.cs">
+    <Compile Include="PresentationlLayer\frm_luong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_luong.Designer.cs">
+    <Compile Include="PresentationlLayer\frm_luong.Designer.cs">
       <DependentUpon>frm_luong.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_nhanvien.cs">
+    <Compile Include="PresentationlLayer\frm_nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_nhanvien.Designer.cs">
+    <Compile Include="PresentationlLayer\frm_nhanvien.Designer.cs">
       <DependentUpon>frm_nhanvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_phong.cs">
+    <Compile Include="PresentationlLayer\frm_phong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_phong.Designer.cs">
+    <Compile Include="PresentationlLayer\frm_phong.Designer.cs">
       <DependentUpon>frm_phong.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_test.Designer.cs">
+      <DependentUpon>frm_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703252054262_initiliaze.cs" />
+    <Compile Include="Migrations\201703252054262_initiliaze.Designer.cs">
+      <DependentUpon>201703252054262_initiliaze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm_dangnhap.resx">
+    <EmbeddedResource Include="PresentationlLayer\frm_dangnhap.resx">
       <DependentUpon>frm_dangnhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_chucvu.resx">
+    <EmbeddedResource Include="PresentationlLayer\frm_chucvu.resx">
       <DependentUpon>frm_chucvu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_luong.resx">
+    <EmbeddedResource Include="PresentationlLayer\frm_luong.resx">
       <DependentUpon>frm_luong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_nhanvien.resx">
+    <EmbeddedResource Include="PresentationlLayer\frm_nhanvien.resx">
       <DependentUpon>frm_nhanvien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_phong.resx">
+    <EmbeddedResource Include="PresentationlLayer\frm_phong.resx">
       <DependentUpon>frm_phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_test.resx">
+      <DependentUpon>frm_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703252054262_initiliaze.resx">
+      <DependentUpon>201703252054262_initiliaze.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,6 +146,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\NhanSu.Core.Model.ChucVu.datasource" />
+    <None Include="Properties\DataSources\NhanSu.Core.Model.Phong.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,6 +161,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

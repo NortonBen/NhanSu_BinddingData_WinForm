@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NhanSu
+namespace NhanSu.PersentationlLayer
 {
-    public partial class frm_chucvu : Form
+    public partial class frm_nhanvien : Form
     {
-        public frm_chucvu()
+        public frm_nhanvien()
         {
             InitializeComponent();
+        }
+
+        private void frm_nhanvien_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

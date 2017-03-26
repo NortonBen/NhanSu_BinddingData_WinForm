@@ -15,6 +15,8 @@ D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.frm_nhanvien.resources
 D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.frm_phong.resources
 D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.Properties.Resources.resources
 D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.csproj.GenerateResource.Cache
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.Properties.Resources.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.csproj.GenerateResource.Cache
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\NhanSu.exe.config
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\NhanSu.exe
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\NhanSu.pdb
@@ -22,12 +24,13 @@ C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Deb
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\EntityFramework.xml
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_dangnhap.resources
-C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_chucvu.resources
-C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_luong.resources
-C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_nhanvien.resources
-C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_phong.resources
-C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.Properties.Resources.resources
-C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.csproj.GenerateResource.Cache
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.exe
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.pdb
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.Migrations.initiliaze.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.frm_test.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PersentationlLayer.frm_dangnhap.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PersentationlLayer.frm_chucvu.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PersentationlLayer.frm_luong.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PersentationlLayer.frm_nhanvien.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PersentationlLayer.frm_phong.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.csprojResolveAssemblyReference.cache

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NhanSu.Core.Model
+namespace NhanSu.DataAccessLayer
 {
     public class ObservableListSource<T> : ObservableCollection<T>, IListSource
             where T : class

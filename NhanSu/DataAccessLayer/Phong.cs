@@ -1,4 +1,4 @@
-namespace NhanSu.Core.Model
+namespace NhanSu.DataAccessLayer
 {
     using System;
     using System.Collections.Generic;
@@ -6,25 +6,29 @@ namespace NhanSu.Core.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("QL_Phong")]
-    public partial class Phong
+    public  class Phong
     {
-        [StringLength(30)]
+        public Phong()
+        {
+            this.NhanViens = new ObservableListSource<NhanVien>();
+        }
+        [Key]
+        [MaxLength(30)]
         public string Map { get; set; }
 
-        [Key]
-        [Column(Order = 0)]
+        
         [StringLength(30)]
         public string TenP { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
+        
         [StringLength(30)]
         public string DiaChiP { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
+       
         [StringLength(30)]
         public string SDT { get; set; }
+
+         
+        public virtual ObservableListSource<NhanVien> NhanViens { get; set; }
     }
 }
