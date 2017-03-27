@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tb_map = new System.Windows.Forms.TextBox();
-            this.tb_ngaykthuc = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.tb_hopsong = new System.Windows.Forms.TextBox();
             this.tb_tenhopdong = new System.Windows.Forms.TextBox();
             this.tb_manv = new System.Windows.Forms.TextBox();
-            this.tb_ngayki = new System.Windows.Forms.TextBox();
             this.tb_phucap = new System.Windows.Forms.TextBox();
             this.tb_lcb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,20 +49,20 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.dp_ngki = new System.Windows.Forms.DateTimePicker();
+            this.dp_ngkt = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tb_map);
-            this.groupBox1.Controls.Add(this.tb_ngaykthuc);
+            this.groupBox1.Controls.Add(this.dp_ngkt);
+            this.groupBox1.Controls.Add(this.dp_ngki);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.tb_hopsong);
             this.groupBox1.Controls.Add(this.tb_tenhopdong);
             this.groupBox1.Controls.Add(this.tb_manv);
-            this.groupBox1.Controls.Add(this.tb_ngayki);
             this.groupBox1.Controls.Add(this.tb_phucap);
             this.groupBox1.Controls.Add(this.tb_lcb);
             this.groupBox1.Controls.Add(this.label6);
@@ -81,20 +77,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // tb_map
-            // 
-            this.tb_map.Location = new System.Drawing.Point(104, 133);
-            this.tb_map.Name = "tb_map";
-            this.tb_map.Size = new System.Drawing.Size(174, 20);
-            this.tb_map.TabIndex = 15;
-            // 
-            // tb_ngaykthuc
-            // 
-            this.tb_ngaykthuc.Location = new System.Drawing.Point(416, 133);
-            this.tb_ngaykthuc.Name = "tb_ngaykthuc";
-            this.tb_ngaykthuc.Size = new System.Drawing.Size(167, 20);
-            this.tb_ngaykthuc.TabIndex = 14;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -104,15 +86,6 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "Ngày kết thúc";
             this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(23, 133);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Mã phòng";
             // 
             // tb_hopsong
             // 
@@ -134,13 +107,6 @@
             this.tb_manv.Name = "tb_manv";
             this.tb_manv.Size = new System.Drawing.Size(174, 20);
             this.tb_manv.TabIndex = 9;
-            // 
-            // tb_ngayki
-            // 
-            this.tb_ngayki.Location = new System.Drawing.Point(416, 102);
-            this.tb_ngayki.Name = "tb_ngayki";
-            this.tb_ngayki.Size = new System.Drawing.Size(167, 20);
-            this.tb_ngayki.TabIndex = 8;
             // 
             // tb_phucap
             // 
@@ -283,6 +249,22 @@
             this.button4.Text = "Lưu";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // dp_ngki
+            // 
+            this.dp_ngki.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dp_ngki.Location = new System.Drawing.Point(416, 101);
+            this.dp_ngki.Name = "dp_ngki";
+            this.dp_ngki.Size = new System.Drawing.Size(167, 20);
+            this.dp_ngki.TabIndex = 16;
+            // 
+            // dp_ngkt
+            // 
+            this.dp_ngkt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dp_ngkt.Location = new System.Drawing.Point(416, 133);
+            this.dp_ngkt.Name = "dp_ngkt";
+            this.dp_ngkt.Size = new System.Drawing.Size(167, 20);
+            this.dp_ngkt.TabIndex = 17;
+            // 
             // frm_hopdong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,13 +302,9 @@
         private System.Windows.Forms.TextBox tb_hopsong;
         private System.Windows.Forms.TextBox tb_tenhopdong;
         private System.Windows.Forms.TextBox tb_manv;
-        private System.Windows.Forms.TextBox tb_ngayki;
         private System.Windows.Forms.TextBox tb_phucap;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tb_map;
-        private System.Windows.Forms.TextBox tb_ngaykthuc;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tb_timkiem;
@@ -334,5 +312,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DateTimePicker dp_ngkt;
+        private System.Windows.Forms.DateTimePicker dp_ngki;
     }
 }

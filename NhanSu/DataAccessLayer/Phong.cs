@@ -13,21 +13,13 @@ namespace NhanSu.DataAccessLayer
             this.NhanViens = new ObservableListSource<NhanVien>();
         }
         [Key]
-        [MaxLength(30)]
+        [MaxLength(10)]
         [Required]
         public string Map { get; set; }
 
         [Required]
         [MaxLength(30)]
         public string TenP { get; set; }
-
-        [Required]
-        [MaxLength(30)]
-        public string DiaChiP { get; set; }
-
-        [Required]
-        [MaxLength(30)]
-        public string SDT { get; set; }
 
          
         public virtual ObservableListSource<NhanVien> NhanViens { get; set; }

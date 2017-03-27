@@ -57,23 +57,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicLayer\BLY_ChucVu.cs" />
     <Compile Include="BusinessLogicLayer\BLY_DangNhap.cs" />
-    <Compile Include="BusinessLogicLayer\BLY_Luong.cs" />
     <Compile Include="BusinessLogicLayer\BLY_NhanVien.cs" />
     <Compile Include="BusinessLogicLayer\BLY_Phong.cs" />
-    <Compile Include="BusinessLogicLayer\VadidationAttribute.cs" />
-    <Compile Include="DataAccessLayer\ChucVu.cs" />
     <Compile Include="DataAccessLayer\DataContext.cs" />
-    <Compile Include="DataAccessLayer\Luong.cs" />
+    <Compile Include="DataAccessLayer\HopDong.cs" />
     <Compile Include="DataAccessLayer\NhanVien.cs" />
     <Compile Include="DataAccessLayer\ObservableListSource.cs" />
     <Compile Include="DataAccessLayer\Phong.cs" />
+    <Compile Include="DataAccessLayer\QuyetDinh.cs" />
     <Compile Include="Helper\BindingDataForm.cs" />
     <Compile Include="Helper\StateForm.cs" />
-    <Compile Include="Migrations\201703261344247_initiliaze.cs" />
-    <Compile Include="Migrations\201703261344247_initiliaze.Designer.cs">
-      <DependentUpon>201703261344247_initiliaze.cs</DependentUpon>
+    <Compile Include="Migrations\201703272028205_initiliaze.cs" />
+    <Compile Include="Migrations\201703272028205_initiliaze.Designer.cs">
+      <DependentUpon>201703272028205_initiliaze.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationlLayer\frm_hopdong.cs">
       <SubType>Form</SubType>
@@ -106,16 +103,10 @@
     <Compile Include="PresentationlLayer\frm_quyetdinh.Designer.cs">
       <DependentUpon>frm_quyetdinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationlLayer\Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationlLayer\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\201703261344247_initiliaze.resx">
-      <DependentUpon>201703261344247_initiliaze.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703272028205_initiliaze.resx">
+      <DependentUpon>201703272028205_initiliaze.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationlLayer\frm_hopdong.resx">
       <DependentUpon>frm_hopdong.cs</DependentUpon>
@@ -131,9 +122,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationlLayer\frm_quyetdinh.resx">
       <DependentUpon>frm_quyetdinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationlLayer\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

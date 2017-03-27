@@ -1,18 +1,7 @@
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\bin\Debug\Nhân Sự.exe.config
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\Nhân Sự.exe
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\Nhân Sự.pdb
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\bin\Debug\Nhân Sự.exe
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\bin\Debug\Nhân Sự.pdb
 D:\C#\NhanSu_BinddingData_WinForm\NhanSu\bin\Debug\EntityFramework.dll
 D:\C#\NhanSu_BinddingData_WinForm\NhanSu\bin\Debug\EntityFramework.SqlServer.dll
 D:\C#\NhanSu_BinddingData_WinForm\NhanSu\bin\Debug\EntityFramework.xml
 D:\C#\NhanSu_BinddingData_WinForm\NhanSu\bin\Debug\EntityFramework.SqlServer.xml
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.csprojResolveAssemblyReference.cache
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.frm_dangnhap.resources
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.frm_chucvu.resources
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.frm_luong.resources
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.frm_nhanvien.resources
-D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.frm_phong.resources
 D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.Properties.Resources.resources
 D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.csproj.GenerateResource.Cache
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.Properties.Resources.resources
@@ -38,3 +27,14 @@ C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Deb
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PresentationlLayer.frm_phong.resources
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PresentationlLayer.frm_quyetdinh.resources
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PresentationlLayer.Main.resources
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\bin\Debug\NhanSu.exe.config
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.PresentationlLayer.frm_hopdong.resources
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.PersentationlLayer.frm_dangnhap.resources
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.PresentationlLayer.frm_nhanvien.resources
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.PresentationlLayer.frm_phong.resources
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.PresentationlLayer.frm_quyetdinh.resources
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\bin\Debug\NhanSu.exe
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\bin\Debug\NhanSu.pdb
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.exe
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.pdb
+D:\C#\NhanSu_BinddingData_WinForm\NhanSu\obj\Debug\NhanSu.Migrations.initiliaze.resources

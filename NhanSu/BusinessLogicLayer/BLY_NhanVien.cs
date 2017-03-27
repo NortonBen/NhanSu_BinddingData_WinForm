@@ -44,14 +44,7 @@ namespace NhanSu.BusinessLogicLayer
                 {
                     return false;
                 }
-                item.TenNV = NhanVien.TenNV;
-                item.MaP = NhanVien.MaP;
-                item.MaCV = NhanVien.MaCV;
-                item.NgayVaoCty = NhanVien.NgayVaoCty;
-                item.NamSinh = NhanVien.NamSinh;
-                item.GioiTinh = NhanVien.GioiTinh;
-                item.DiaChi = NhanVien.DiaChi;
-                item.SDT = NhanVien.SDT;
+               
                
                 db.Entry(item).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();

@@ -8,9 +8,15 @@ namespace NhanSu.DataAccessLayer
 
     public class NhanVien
     {
+        public NhanVien()
+        {
+            this.HopDongs = new ObservableListSource<HopDong>();
+            this.QuyetDinhs = new ObservableListSource<QuyetDinh>();
+        }
+
+
         [Key]
-        [MaxLength(30)]
-        [Required]
+        [MaxLength(10)]
         public string MaNV { get; set; }
 
         [Required]
@@ -24,28 +30,31 @@ namespace NhanSu.DataAccessLayer
         [Required]
         public string GioiTinh { get; set; }
 
-        [MaxLength(30)]
-        public string MaCV { get; set; }
-        [ForeignKey("MaCV")]
-        public virtual ChucVu ChucVu { get; set; }
-
-        [MaxLength(30)]
+        [MaxLength(10)]
         [Required]
         public string MaP { get; set; }
         [ForeignKey("MaP")]
         public virtual Phong Phong { get; set; }
 
-        [DataType(DataType.Date)]
-        [Required]
-        public DateTime NgayVaoCty { get; set; }
 
-        [StringLength(20)]
-        [Required]
-        public string SDT { get; set; }
+        [StringLength(50)]
+        public string quequan { get; set; }
 
 
         [StringLength(60)]
         [Required]
-        public string DiaChi { get; set; }
+        public string dantoc { get; set; }
+
+        [StringLength(60)]
+        [Required]
+        public string ngoaingu { get; set; }
+
+        [StringLength(60)]
+        [Required]
+        public string trinhdo { get; set; }
+
+        public virtual ObservableListSource<HopDong> HopDongs { get; set; }
+        public virtual ObservableListSource<QuyetDinh> QuyetDinhs { get; set; }
     }
 }
+

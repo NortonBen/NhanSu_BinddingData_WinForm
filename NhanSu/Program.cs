@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NhanSu.PresentationlLayer;
 
 namespace NhanSu
 {
@@ -16,7 +17,7 @@ namespace NhanSu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NhanSu.PersentationlLayer.frm_phong ());
+            Application.Run(new frm_phong());
         }
     }
 }

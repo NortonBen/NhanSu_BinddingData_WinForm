@@ -28,7 +28,7 @@ namespace NhanSu.Migrations
             //    );
             //
             context.Phong.AddOrUpdate(t => t.Map,
-                new Phong { Map= "MP01", DiaChiP= "DC 1", SDT = "00000345" , TenP = "phong 1" }
+                new Phong { Map= "MP01" , TenP = "phong 1" }
                 );
         }
     }

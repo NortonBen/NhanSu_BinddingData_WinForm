@@ -13,7 +13,7 @@ namespace NhanSu.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201703261344247_initiliaze"; }
+            get { return "201703272028205_initiliaze"; }
         }
         
         string IMigrationMetadata.Source

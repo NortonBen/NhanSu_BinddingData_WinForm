@@ -12,10 +12,11 @@ namespace NhanSu.DataAccessLayer
         {
         }
 
-        public virtual DbSet<Luong> Luong { get; set; }
+
         public virtual DbSet<NhanVien> NhanVien { get; set; }
         public virtual DbSet<Phong> Phong { get; set; }
-        public virtual DbSet<ChucVu> ChucVu { get; set; }
+        public virtual DbSet<HopDong> HopDong { get; set; }
+        public virtual DbSet<QuyetDinh> QuyetDinh { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

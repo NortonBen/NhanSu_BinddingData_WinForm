@@ -17,7 +17,6 @@ namespace NhanSu.BusinessLogicLayer
             return db.Phong.ToList();
         }
 
-        [Vadidation]
         public bool add(Phong phong)
         {
             
@@ -43,9 +42,7 @@ namespace NhanSu.BusinessLogicLayer
                     return false;
                 }
 
-                phong.SDT = phong.SDT;
                 phong.TenP = phong.TenP;
-                phong.DiaChiP = phong.DiaChiP;
 
                 db.Entry(item).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
