@@ -75,24 +75,19 @@
     <Compile Include="Migrations\201703261344247_initiliaze.Designer.cs">
       <DependentUpon>201703261344247_initiliaze.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationlLayer\frm_hopdong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationlLayer\frm_hopdong.Designer.cs">
+      <DependentUpon>frm_hopdong.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationlLayer\frm_dangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationlLayer\frm_dangnhap.Designer.cs">
       <DependentUpon>frm_dangnhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationlLayer\frm_chucvu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationlLayer\frm_chucvu.Designer.cs">
-      <DependentUpon>frm_chucvu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationlLayer\frm_luong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationlLayer\frm_luong.Designer.cs">
-      <DependentUpon>frm_luong.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PresentationlLayer\frm_nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,26 +100,40 @@
     <Compile Include="PresentationlLayer\frm_phong.Designer.cs">
       <DependentUpon>frm_phong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PresentationlLayer\frm_quyetdinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationlLayer\frm_quyetdinh.Designer.cs">
+      <DependentUpon>frm_quyetdinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationlLayer\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationlLayer\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Migrations\201703261344247_initiliaze.resx">
       <DependentUpon>201703261344247_initiliaze.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationlLayer\frm_hopdong.resx">
+      <DependentUpon>frm_hopdong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationlLayer\frm_dangnhap.resx">
       <DependentUpon>frm_dangnhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationlLayer\frm_chucvu.resx">
-      <DependentUpon>frm_chucvu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationlLayer\frm_luong.resx">
-      <DependentUpon>frm_luong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationlLayer\frm_nhanvien.resx">
       <DependentUpon>frm_nhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationlLayer\frm_phong.resx">
       <DependentUpon>frm_phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationlLayer\frm_quyetdinh.resx">
+      <DependentUpon>frm_quyetdinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationlLayer\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,6 +148,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\NhanSu.Core.Model.ChucVu.datasource" />
     <None Include="Properties\DataSources\NhanSu.Core.Model.Phong.datasource" />
+    <None Include="Properties\DataSources\NhanSu.DataAccessLayer.NhanVien.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

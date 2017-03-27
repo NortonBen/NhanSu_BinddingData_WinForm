@@ -33,3 +33,8 @@ C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Deb
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PersentationlLayer.frm_phong.resources
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.csprojResolveAssemblyReference.cache
 C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.Migrations.initiliaze.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PresentationlLayer.frm_hopdong.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PresentationlLayer.frm_nhanvien.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PresentationlLayer.frm_phong.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PresentationlLayer.frm_quyetdinh.resources
+C:\Users\xuan\Documents\Visual Studio 2015\Projects\Đăng nhập\NhanSu\obj\Debug\NhanSu.PresentationlLayer.Main.resources

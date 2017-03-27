@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NhanSu.PersentationlLayer
+namespace NhanSu.PresentationlLayer
 {
     public partial class frm_nhanvien : Form
     {
@@ -17,7 +17,17 @@ namespace NhanSu.PersentationlLayer
             InitializeComponent();
         }
 
-        private void frm_nhanvien_Load(object sender, EventArgs e)
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
