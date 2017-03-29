@@ -17,7 +17,12 @@ namespace NhanSu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_phong());
+            frm_dangnhap form = new frm_dangnhap();
+            form.ShowDialog();
+            if (form.islogin)
+            {
+                Application.Run(new frm_hopdong());
+            }
         }
     }
 }

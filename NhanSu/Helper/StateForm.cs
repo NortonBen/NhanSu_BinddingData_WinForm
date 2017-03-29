@@ -8,7 +8,10 @@ namespace NhanSu.Helper
 {
     public enum StateForm
     {
+        None,
+        Show,
         New,
-        Edit
+        Edit,
+        Del
     }
 }

@@ -17,6 +17,7 @@ namespace NhanSu.DataAccessLayer
         public virtual DbSet<Phong> Phong { get; set; }
         public virtual DbSet<HopDong> HopDong { get; set; }
         public virtual DbSet<QuyetDinh> QuyetDinh { get; set; }
+        public virtual DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

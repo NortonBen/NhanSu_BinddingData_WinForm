@@ -28,7 +28,14 @@ namespace NhanSu.Migrations
             //    );
             //
             context.Phong.AddOrUpdate(t => t.Map,
-                new Phong { Map= "MP01" , TenP = "phong 1" }
+                new Phong { Map = "MP01", TenP = "phong 1" },
+                new Phong { Map = "MP02", TenP = "phong 2" },
+                new Phong { Map = "MP03", TenP = "phong 3" },
+                new Phong { Map = "MP04", TenP = "phong 4" },
+                new Phong { Map = "MP05", TenP = "phong 5" }
+                );
+            context.User.AddOrUpdate(p => p.id,
+                new User { id = 1, email = "admin@gmail.com", password = "123" }
                 );
         }
     }

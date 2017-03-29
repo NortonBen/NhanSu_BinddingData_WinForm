@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,8 +42,13 @@
             this.btn_luu = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_huy = new System.Windows.Forms.Button();
+            this.mapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -93,7 +99,6 @@
             this.tb_timkiem.Name = "tb_timkiem";
             this.tb_timkiem.Size = new System.Drawing.Size(140, 20);
             this.tb_timkiem.TabIndex = 5;
-            this.tb_timkiem.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
@@ -106,7 +111,7 @@
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(98, 185);
+            this.btn_them.Location = new System.Drawing.Point(44, 188);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(75, 23);
             this.btn_them.TabIndex = 7;
@@ -115,7 +120,7 @@
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(201, 185);
+            this.btn_sua.Location = new System.Drawing.Point(147, 188);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(75, 23);
             this.btn_sua.TabIndex = 8;
@@ -124,7 +129,7 @@
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(311, 185);
+            this.btn_xoa.Location = new System.Drawing.Point(257, 188);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(75, 23);
             this.btn_xoa.TabIndex = 9;
@@ -133,7 +138,7 @@
             // 
             // btn_luu
             // 
-            this.btn_luu.Location = new System.Drawing.Point(401, 185);
+            this.btn_luu.Location = new System.Drawing.Point(347, 188);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.Size = new System.Drawing.Size(75, 23);
             this.btn_luu.TabIndex = 10;
@@ -142,9 +147,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mapDataGridViewTextBoxColumn,
+            this.tenPDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.phongBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(26, 227);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(520, 195);
             this.dataGridView1.TabIndex = 11;
             // 
@@ -161,11 +174,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
+            // btn_huy
+            // 
+            this.btn_huy.Location = new System.Drawing.Point(443, 188);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(75, 23);
+            this.btn_huy.TabIndex = 13;
+            this.btn_huy.Text = "Hủy";
+            this.btn_huy.UseVisualStyleBackColor = true;
+            // 
+            // mapDataGridViewTextBoxColumn
+            // 
+            this.mapDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mapDataGridViewTextBoxColumn.DataPropertyName = "Map";
+            this.mapDataGridViewTextBoxColumn.HeaderText = "Map";
+            this.mapDataGridViewTextBoxColumn.Name = "mapDataGridViewTextBoxColumn";
+            this.mapDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tenPDataGridViewTextBoxColumn
+            // 
+            this.tenPDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenPDataGridViewTextBoxColumn.DataPropertyName = "TenP";
+            this.tenPDataGridViewTextBoxColumn.HeaderText = "TenP";
+            this.tenPDataGridViewTextBoxColumn.Name = "tenPDataGridViewTextBoxColumn";
+            this.tenPDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phongBindingSource
+            // 
+            this.phongBindingSource.DataSource = typeof(NhanSu.DataAccessLayer.Phong);
+            // 
             // frm_phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 434);
+            this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_luu);
@@ -177,9 +220,11 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_phong";
             this.Text = "Phòng";
+            this.Load += new System.EventHandler(this.frm_phong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +245,9 @@
         private System.Windows.Forms.Button btn_luu;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource phongBindingSource;
+        private System.Windows.Forms.Button btn_huy;
     }
 }

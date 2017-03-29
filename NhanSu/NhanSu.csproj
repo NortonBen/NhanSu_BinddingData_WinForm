@@ -58,19 +58,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BLY_DangNhap.cs" />
-    <Compile Include="BusinessLogicLayer\BLY_NhanVien.cs" />
-    <Compile Include="BusinessLogicLayer\BLY_Phong.cs" />
+    <Compile Include="BusinessLogicLayer\BL_HopDong.cs" />
+    <Compile Include="BusinessLogicLayer\BY_NhanVien.cs" />
+    <Compile Include="BusinessLogicLayer\BY_Phong.cs" />
+    <Compile Include="BusinessLogicLayer\BY_QuyetDinh.cs" />
     <Compile Include="DataAccessLayer\DataContext.cs" />
     <Compile Include="DataAccessLayer\HopDong.cs" />
     <Compile Include="DataAccessLayer\NhanVien.cs" />
     <Compile Include="DataAccessLayer\ObservableListSource.cs" />
     <Compile Include="DataAccessLayer\Phong.cs" />
     <Compile Include="DataAccessLayer\QuyetDinh.cs" />
+    <Compile Include="DataAccessLayer\User.cs" />
+    <Compile Include="Helper\BindDataGridView.cs" />
     <Compile Include="Helper\BindingDataForm.cs" />
+    <Compile Include="Helper\ControlForm.cs" />
+    <Compile Include="Helper\HandleDouble.cs" />
+    <Compile Include="Helper\HandleTextBox.cs" />
+    <Compile Include="Helper\HandleDateTime.cs" />
     <Compile Include="Helper\StateForm.cs" />
-    <Compile Include="Migrations\201703272028205_initiliaze.cs" />
-    <Compile Include="Migrations\201703272028205_initiliaze.Designer.cs">
-      <DependentUpon>201703272028205_initiliaze.cs</DependentUpon>
+    <Compile Include="Migrations\201703290648045_add-table-initiliaze.cs" />
+    <Compile Include="Migrations\201703290648045_add-table-initiliaze.Designer.cs">
+      <DependentUpon>201703290648045_add-table-initiliaze.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationlLayer\frm_hopdong.cs">
       <SubType>Form</SubType>
@@ -105,8 +113,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\201703272028205_initiliaze.resx">
-      <DependentUpon>201703272028205_initiliaze.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703290648045_add-table-initiliaze.resx">
+      <DependentUpon>201703290648045_add-table-initiliaze.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationlLayer\frm_hopdong.resx">
       <DependentUpon>frm_hopdong.cs</DependentUpon>
@@ -134,9 +142,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\NhanSu.Core.Model.ChucVu.datasource" />
-    <None Include="Properties\DataSources\NhanSu.Core.Model.Phong.datasource" />
+    <None Include="Properties\DataSources\NhanSu.DataAccessLayer.HopDong.datasource" />
     <None Include="Properties\DataSources\NhanSu.DataAccessLayer.NhanVien.datasource" />
+    <None Include="Properties\DataSources\NhanSu.DataAccessLayer.Phong.datasource" />
+    <None Include="Properties\DataSources\NhanSu.DataAccessLayer.QuyetDinh.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

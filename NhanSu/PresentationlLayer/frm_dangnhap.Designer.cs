@@ -1,4 +1,4 @@
-﻿namespace NhanSu.PersentationlLayer
+﻿namespace NhanSu.PresentationlLayer
 {
     partial class frm_dangnhap
     {
@@ -28,32 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_password = new System.Windows.Forms.TextBox();
+            this.tb_email = new System.Windows.Forms.TextBox();
+            this.lb_email = new System.Windows.Forms.Label();
+            this.lb_pasword = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_login
             // 
-            this.button1.Location = new System.Drawing.Point(65, 174);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_login.Location = new System.Drawing.Point(65, 174);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(75, 23);
+            this.btn_login.TabIndex = 0;
+            this.btn_login.Text = "Đăng nhập";
+            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
-            // button2
+            // btn_exit
             // 
-            this.button2.Location = new System.Drawing.Point(177, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_exit.Location = new System.Drawing.Point(177, 174);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(75, 23);
+            this.btn_exit.TabIndex = 1;
+            this.btn_exit.Text = "Thoát";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // label1
             // 
@@ -67,12 +71,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 122);
+            this.label2.Location = new System.Drawing.Point(16, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mật khẩu";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -84,34 +87,55 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Đăng nhập ";
             // 
-            // textBox1
+            // tb_password
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
-            this.textBox1.TabIndex = 5;
+            this.tb_password.Location = new System.Drawing.Point(134, 121);
+            this.tb_password.Name = "tb_password";
+            this.tb_password.Size = new System.Drawing.Size(156, 20);
+            this.tb_password.TabIndex = 5;
             // 
-            // textBox2
+            // tb_email
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 20);
-            this.textBox2.TabIndex = 6;
+            this.tb_email.Location = new System.Drawing.Point(134, 79);
+            this.tb_email.Name = "tb_email";
+            this.tb_email.Size = new System.Drawing.Size(156, 20);
+            this.tb_email.TabIndex = 6;
+            // 
+            // lb_email
+            // 
+            this.lb_email.AutoSize = true;
+            this.lb_email.Location = new System.Drawing.Point(134, 103);
+            this.lb_email.Name = "lb_email";
+            this.lb_email.Size = new System.Drawing.Size(35, 13);
+            this.lb_email.TabIndex = 7;
+            this.lb_email.Text = "label4";
+            // 
+            // lb_pasword
+            // 
+            this.lb_pasword.AutoSize = true;
+            this.lb_pasword.Location = new System.Drawing.Point(134, 149);
+            this.lb_pasword.Name = "lb_pasword";
+            this.lb_pasword.Size = new System.Drawing.Size(35, 13);
+            this.lb_pasword.TabIndex = 8;
+            this.lb_pasword.Text = "label4";
             // 
             // frm_dangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(324, 236);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lb_pasword);
+            this.Controls.Add(this.lb_email);
+            this.Controls.Add(this.tb_email);
+            this.Controls.Add(this.tb_password);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_exit);
+            this.Controls.Add(this.btn_login);
             this.Name = "frm_dangnhap";
             this.Text = "Đăng  Nhập";
+            this.Load += new System.EventHandler(this.frm_dangnhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,13 +143,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_password;
+        private System.Windows.Forms.TextBox tb_email;
+        private System.Windows.Forms.Label lb_email;
+        private System.Windows.Forms.Label lb_pasword;
     }
 }
 

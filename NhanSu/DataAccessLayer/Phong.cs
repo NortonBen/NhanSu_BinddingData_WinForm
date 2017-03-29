@@ -14,7 +14,6 @@ namespace NhanSu.DataAccessLayer
         }
         [Key]
         [MaxLength(10)]
-        [Required]
         public string Map { get; set; }
 
         [Required]

@@ -9,37 +9,67 @@ using System.Windows.Forms;
 
 namespace NhanSu.Helper
 {
-    class BindingDataForm
+    public interface IHandlerForm
+    {
+         object GetValue(object obj);
+        void SetValue(Control control, object obj);
+    }
+
+    public abstract class AHandlerForm : IHandlerForm
+    {
+        public  object  GetValue(object obj) { return obj; }
+        public  void SetValue(Control control,object obj) {
+            if (obj == null)
+            {
+                control.Text = "";
+            }
+            else
+            {
+                control.Text = obj.ToString();
+            }
+        }
+    }
+
+    public class BindingDataForm
     {
         Dictionary<string, Label> show_error = new Dictionary<string, Label>();
         Dictionary<string, Control> input = new Dictionary<string, Control>();
+        Dictionary<string, IHandlerForm> handers = new Dictionary<string, IHandlerForm>();
         List<string> errrs = new List<string>();
         object obj = null;
+        HandleTextBox handleText = new HandleTextBox();
 
-        public BindingDataForm setBindInput(string name, Control control)
+        public BindingDataForm setBindInput(string name, Control control, IHandlerForm hander = null)
         {
-            control.TextChanged += new System.EventHandler((object sender, EventArgs e) =>
+            var __handler = new System.EventHandler((object sender, EventArgs e) =>
             {
-                object value  = ((Control)sender).Text;
-                if (sender.GetType().Name=="ComboBox") 
+                object value = handleText.GetValue(sender);
+                if (hander != null)
                 {
-
-                    value = ((ComboBox)sender).Text;
-
-                }
-                if (sender.GetType().Name == "DateTimePicker")
-                {
-                    value = ((DateTimePicker)sender).Value;
+                    value = hander.GetValue(sender);
                 }
                 Type objtype = this.obj.GetType();
-                
+
                 PropertyInfo item = objtype.GetProperties().FirstOrDefault(t => t.Name == name);
                 if (item != null)
                 {
                     item.SetValue(obj, value);
                 }
             });
+            control.TextChanged += new System.EventHandler(__handler);
+            if(control.GetType().Name == "CheckBox")
+            {
+                ((CheckBox)control).CheckedChanged += new System.EventHandler(__handler);
+            }
+            if (control.GetType().Name == "CheckBox")
+            {
+                ((DateTimePicker)control).ValueChanged += new System.EventHandler(__handler);
+            }
             this.input.Add(name, control);
+            if(hander != null)
+            {
+                this.handers.Add(name, hander);
+            }
             return this;
         }
 
@@ -59,38 +89,20 @@ namespace NhanSu.Helper
                 if (input.ContainsKey(p.Name))
                 {
                     Control control = input[p.Name];
-                    if (control.GetType().Name == "TextBox")
+                    if (handers.ContainsKey(p.Name))
                     {
-
-                        if (p.GetValue(obj) == null)
-                        {
-                            control.Text = "";
-                            continue;
-                        }
-                        else
-                        {
-                            control.Text = p.GetValue(obj).ToString();
-                        }
-                    }
-                    if (input[p.Name].GetType().Name =="DateTimePicker")
+                        var hander = handers[p.Name];
+                        hander.SetValue(control, p.GetValue(obj));
+                    }else
                     {
-                        DateTimePicker date = (DateTimePicker)input[p.Name];
-                        var __data = p.GetValue(obj);
-                        if (__data == null)
-                        {
-                            continue;
-                        }
                         try
                         {
-                            date.Value = (DateTime)__data;
-
-                        }catch(Exception ex)
-                        {
-                            date.Value = DateTime.Now;
-
+                            handleText.SetValue(control, p.GetValue(obj));
                         }
-
-
+                        catch(Exception ex)
+                        {
+                            Console.Write(ex);
+                        }
                     }
                 }
             }
@@ -125,7 +137,10 @@ namespace NhanSu.Helper
                 {
                     foreach (Attribute a in p.GetCustomAttributes(false))
                     {
-
+                        if (!keyAttribute(a, p))
+                        {
+                            success = false;
+                        }
                         if (!RequiredAttribute(a, p))
                         {
                             success = false;
@@ -150,10 +165,32 @@ namespace NhanSu.Helper
             return this.errrs;
         }
 
+        private bool keyAttribute(Attribute a, PropertyInfo p)
+        {
+
+            if (a.GetType().Name == "KeyAttribute")
+            {
+                object o = p.GetValue(obj);
+                if (o == null)
+                {
+                    if (show_error.ContainsKey(p.Name))
+                    {
+                        Label label = show_error[p.Name];
+                        label.Text = "Bạn Chưa nhập " + p.Name;
+                    }
+                    this.errrs.Add("Bạn Chưa nhập " + p.Name);
+
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
         private bool Required(Attribute a, PropertyInfo p)
         {
             object o = p.GetValue(obj);
-            if (o == null)
+            if (o == "")
             {
                 if (show_error.ContainsKey(p.Name))
                 {
@@ -195,7 +232,7 @@ namespace NhanSu.Helper
             {
                 MaxLengthAttribute max_a = (MaxLengthAttribute)a;
                 string o = (string)p.GetValue(obj);
-                if (!Required(a, p))
+                if (!Required(a, p) || o == "" || o == null)
                 {
                     return false;
                 }
